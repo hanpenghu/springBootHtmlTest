@@ -1,9 +1,9 @@
-package main.java.com.hanhan.springboothtmltest.DDao;
+package com.hanhan.springboothtmltest.DDao;
 
 import java.util.List;
-import main.java.com.hanhan.springboothtmltest.EDto.MfTy;
-import main.java.com.hanhan.springboothtmltest.EDto.MfTyExample;
-import main.java.com.hanhan.springboothtmltest.EDto.MfTyKey;
+import com.hanhan.springboothtmltest.EDto.MfTy;
+import com.hanhan.springboothtmltest.EDto.MfTyExample;
+import com.hanhan.springboothtmltest.EDto.MfTyKey;
 import org.apache.ibatis.annotations.Param;
 
 public interface MfTyMapper {

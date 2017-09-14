@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="main.java.com.hanhan.springboothtmltest.DDao.MfTyMapper">
-  <resultMap id="BaseResultMap" type="main.java.com.hanhan.springboothtmltest.EDto.MfTy">
+<mapper namespace="com.hanhan.springboothtmltest.DDao.MfTyMapper">
+  <resultMap id="BaseResultMap" type="com.hanhan.springboothtmltest.EDto.MfTy">
     <id column="TY_ID" jdbcType="VARCHAR" property="tyId" />
     <id column="TY_NO" jdbcType="VARCHAR" property="tyNo" />
     <result column="TY_DD" jdbcType="TIMESTAMP" property="tyDd" />
@@ -50,7 +50,7 @@
     <result column="SCAN_DATE" jdbcType="TIMESTAMP" property="scanDate" />
     <result column="SL_ID" jdbcType="VARCHAR" property="slId" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="main.java.com.hanhan.springboothtmltest.EDto.MfTy">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hanhan.springboothtmltest.EDto.MfTy">
     <result column="REM" jdbcType="LONGVARCHAR" property="rem" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -121,7 +121,7 @@
   <sql id="Blob_Column_List">
     REM
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTyExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.hanhan.springboothtmltest.EDto.MfTyExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -137,7 +137,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTyExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hanhan.springboothtmltest.EDto.MfTyExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -151,7 +151,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTyKey" resultMap="ResultMapWithBLOBs">
+  <select id="selectByPrimaryKey" parameterType="com.hanhan.springboothtmltest.EDto.MfTyKey" resultMap="ResultMapWithBLOBs">
     select 
     <include refid="Base_Column_List" />
     ,
@@ -160,18 +160,18 @@
     where TY_ID = #{tyId,jdbcType=VARCHAR}
       and TY_NO = #{tyNo,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTyKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.hanhan.springboothtmltest.EDto.MfTyKey">
     delete from MF_TY
     where TY_ID = #{tyId,jdbcType=VARCHAR}
       and TY_NO = #{tyNo,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTyExample">
+  <delete id="deleteByExample" parameterType="com.hanhan.springboothtmltest.EDto.MfTyExample">
     delete from MF_TY
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTy">
+  <insert id="insert" parameterType="com.hanhan.springboothtmltest.EDto.MfTy">
     insert into MF_TY (TY_ID, TY_NO, TY_DD, 
       SAL_NO, CLOSE_ID, CUS_NO, 
       TI_NO, TB_NO, USR, CHK_MAN, 
@@ -205,7 +205,7 @@
       #{scanId,jdbcType=VARCHAR}, #{scanUsr,jdbcType=VARCHAR}, #{scanDate,jdbcType=TIMESTAMP}, 
       #{slId,jdbcType=VARCHAR}, #{rem,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTy">
+  <insert id="insertSelective" parameterType="com.hanhan.springboothtmltest.EDto.MfTy">
     insert into MF_TY
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="tyId != null">
@@ -500,7 +500,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTyExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.hanhan.springboothtmltest.EDto.MfTyExample" resultType="java.lang.Long">
     select count(*) from MF_TY
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -765,7 +765,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTy">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hanhan.springboothtmltest.EDto.MfTy">
     update MF_TY
     <set>
       <if test="tyDd != null">
@@ -910,7 +910,7 @@
     where TY_ID = #{tyId,jdbcType=VARCHAR}
       and TY_NO = #{tyNo,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTy">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.hanhan.springboothtmltest.EDto.MfTy">
     update MF_TY
     set TY_DD = #{tyDd,jdbcType=TIMESTAMP},
       SAL_NO = #{salNo,jdbcType=VARCHAR},
@@ -961,7 +961,7 @@
     where TY_ID = #{tyId,jdbcType=VARCHAR}
       and TY_NO = #{tyNo,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="main.java.com.hanhan.springboothtmltest.EDto.MfTy">
+  <update id="updateByPrimaryKey" parameterType="com.hanhan.springboothtmltest.EDto.MfTy">
     update MF_TY
     set TY_DD = #{tyDd,jdbcType=TIMESTAMP},
       SAL_NO = #{salNo,jdbcType=VARCHAR},

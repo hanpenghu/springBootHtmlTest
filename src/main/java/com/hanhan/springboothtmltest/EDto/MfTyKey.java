@@ -1,4 +1,4 @@
-package main.java.com.hanhan.springboothtmltest.EDto;
+package com.hanhan.springboothtmltest.EDto;
 
 public class MfTyKey {
     private String tyId;

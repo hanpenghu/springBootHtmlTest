@@ -1,4 +1,4 @@
-package main.java.com.hanhan.springboothtmltest.EDto;
+package com.hanhan.springboothtmltest.EDto;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
