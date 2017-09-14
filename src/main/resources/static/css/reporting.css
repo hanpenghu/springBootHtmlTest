@@ -1,0 +1,119 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 14px;
+}
+table{
+	width:100%;
+	font-size: 1rem;
+}
+.table_head th{
+	padding: .2rem 0;
+	font-weight: bold;
+	font-family: Microsoft YaHei;
+	width: 11.111%;
+	background-color: rgb(127,200,234);
+	border-width: 0;
+	color: #fff;
+	border-left:1px solid #fff; 
+}
+.table_head th:last-child{
+	border-right: 0;
+}
+.table_item td{
+	text-align: center;
+	padding: .5rem 0;
+}
+tr.table_item{
+	border-width:0;
+}
+tr.table_item:nth-child(odd){
+	background-color: rgb(232,245,251);
+}
+tr.table_item:nth-child(even){
+	background-color: #fff;
+}
+
+/*分页样式*/
+.page_div {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 15px;
+	font-family: "microsoft yahei";
+	color: #666666;
+	
+	box-sizing: border-box;
+	width: 100%;
+}
+/*
+ * 页数按钮样式
+ */
+.page_div a {
+	min-width: 20px;
+	height: 28px;
+	
+	text-align: center;
+	
+	cursor: pointer;
+	line-height: 28px;
+	color: #666666;
+	font-size: 13px;
+	display: inline-block;
+}
+#firstPage,
+#lastPage {
+	width: 14%;
+	
+	color: #0073A9;
+	/*border: 1px solid #0073A9!important;*/
+}
+#firstPage{
+	border: 1px solid #0073A9;
+	border-right-width: 0;
+}
+#lastPage{
+	border: 1px solid #0073A9;
+	border-left-width: 0;
+}
+#prePage,
+#nextPage {
+	width: 14%;
+	
+	color: #0073A9;	
+}
+#prePage{
+	border: 1px solid #0073A9!important;
+}
+#nextPage{
+	border: 1px solid #0073A9!important;
+}
+.page_div .current {
+	background-color: #0073A9;
+	border-color: #0073A9;
+	color: #FFFFFF;
+}
+.totalPages {
+	margin: 0 10px;
+}
+.totalPages span,
+.totalSize span {
+	color: #0073A9;
+	margin: 0 5px;
+}
+#pageitem{
+	width: 41%;
+	display: inline-block;
+	border: 1px solid #dce0e0!important;
+	border-width: 1px 0;
+}
+#pageitem a{
+	width: 14%;
+}
+.page_wrap{
+	min-height: 200px;
+	max-width: 800px;
+	margin: 0 auto;
+   width:95%; 
+}

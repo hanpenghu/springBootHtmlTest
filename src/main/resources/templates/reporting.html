@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" />
+    <title>企业报表</title>
+    <link rel="stylesheet" type="text/css" href="css/reporting.css">
+    
+  
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+   
+    <script type="text/javascript" src="js/paging.js"></script>
+
+    <style type="text/css">
+    
+    </style>
+</head>
+<body>
+	<table id="consumption_schedule" cellspacing="0" cellpadding="0">
+		<tr class="table_head">
+			<th>姓名</th>
+			<th>入股金额</th>
+			<th>茶叶年消费任务</th>
+			<th>完成返利率(非茶叶不返利)</th>
+			<th>消费项目</th>
+			<th>消费时间</th>
+			<th>消费金额</th>
+			<th>福利招待次数</th>
+			<th>福利剩余次数</th>
+		</tr>
+
+
+		<!-- ajax异步获取数据 -->
+		<tr class="table_item">
+			<td>张三</td>
+			<td>12</td>
+			<td>22</td>
+			<td>33</td>
+			<td>44</td>
+			<td>55</td>
+			<td>66</td>
+			<td>77</td>
+			<td>88</td>
+		</tr>
+		<tr class="table_item">
+			<td>李四</td>
+			<td>12</td>
+			<td>22</td>
+			<td>33</td>
+			<td>44</td>
+			<td>55</td>
+			<td>66</td>
+			<td>77</td>
+			<td>88</td>
+		</tr>
+		<tr class="table_item">
+			<td>张三</td>
+			<td>12</td>
+			<td>22</td>
+			<td>33</td>
+			<td>44</td>
+			<td>55</td>
+			<td>66</td>
+			<td>77</td>
+			<td>88</td>
+		</tr>
+		<tr class="table_item">
+			<td>李四</td>
+			<td>12</td>
+			<td>22</td>
+			<td>33</td>
+			<td>44</td>
+			<td>55</td>
+			<td>66</td>
+			<td>77</td>
+			<td>88</td>
+		</tr>
+		<tr class="table_item">
+			<td>张三</td>
+			<td>12</td>
+			<td>22</td>
+			<td>33</td>
+			<td>44</td>
+			<td>55</td>
+			<td>66</td>
+			<td>77</td>
+			<td>88</td>
+		</tr>
+		<tr class="table_item">
+			<td>李四</td>
+			<td>12</td>
+			<td>22</td>
+			<td>33</td>
+			<td>44</td>
+			<td>55</td>
+			<td>66</td>
+			<td>77</td>
+			<td>88</td>
+		</tr>
+		<tr class="table_item">
+			<td>张三</td>
+			<td>12</td>
+			<td>22</td>
+			<td>33</td>
+			<td>44</td>
+			<td>55</td>
+			<td>66</td>
+			<td>77</td>
+			<td>88</td>
+		</tr>
+		<tr class="table_item">
+			<td>李四</td>
+			<td>12</td>
+			<td>22</td>
+			<td>33</td>
+			<td>44</td>
+			<td>55</td>
+			<td>66</td>
+			<td>77</td>
+			<td>88</td>
+		</tr>
+	</table>
+	
+	<div id="page" class="page_div"></div>
+	
+	<script type="text/javascript">
+		$(function(){
+
+
+			var total = 10;
+			$("#page").paging({
+				pageNo:4,
+				totalPage: total,
+				totalSize: 300,
+				callback: function(num) {
+					
+				}
+			})
+
+
+		})
+		
+	</script>
+</body>
+
+</html>
